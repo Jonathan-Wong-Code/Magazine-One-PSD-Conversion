@@ -1,0 +1,904 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;   
+  padding: 5px 20px;
+}
+
+.skipLink:focus {
+  left: 50%;
+  transform: translateX(-50%); 
+}
+
+html {
+  font-size: 125%;
+}
+
+body{ 
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.45;
+  color: #1f2022;
+}
+/* RESETS AND PRECONFIGS */
+ul, li {
+  margin:0;
+  padding:0;
+}
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wrapperSmall {
+  max-width: 1000px;
+  margin:0 auto;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* RE-USABLE STYLES */
+
+.cormorantStyleSemibold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn {
+  font-size: 18px;
+  font-family: "Cormorant Garamond", serif; 
+  text-transform: uppercase;
+  text-align: center;
+  padding: 12px 29px;
+  display: inline-block;
+}
+
+.btnBlue {
+  color: #fff;
+  background: rgba(24,51,153, .78);
+}
+
+.btnBlack {
+  color: #fff;
+  background: #000;
+}
+
+/********* HEADER STYLES *************/
+
+.hamburgerMenu {
+  width: 40px;
+  height: 23px;
+  margin-right: 20px;
+  margin-top: 20px;
+  float: right;
+  display: none;
+}
+
+.headerHamburgerMenu::before {
+  bottom: 15px;
+}
+
+.headerHamburgerMenu::after {
+  top: 15px;
+}
+.header {
+  background: url(images/hero1600.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 1px;
+  line-height: 1;
+  color: #fff; 
+  position: relative;
+}
+
+.headerNavigation {
+  width: 100%;
+}
+
+.headerLogo {
+  font-size: 61.5px;
+  font-style: italic; 
+  text-transform: uppercase;
+  width: 10%;
+  margin: 0;
+  margin-top: .9375%;
+  float: left;
+} 
+
+.headerNav {
+  margin-top: 20px;
+  float:right;
+}
+
+.headerNavItem {
+  float:left;
+}
+
+.headerNavItem:not(:last-child) {
+  margin-right: 35px;
+}
+
+.headerNavLink {
+  font-size: 18px;
+  font-family: "Catamaran", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  display:block;
+  padding: 11px 2px;
+  color: #fcfcfc;
+}
+
+.headerHeading {
+  font-size: 150px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: .7;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+.headerHeadingLarge {
+  font-size: 227px;
+  font-weight: 600;
+  font-style: italic;
+  display: block;
+}
+
+.headerIconList {
+  text-align: center;
+  position: absolute;
+  right: 6.125%;
+  bottom: 3%;
+}
+
+.headerIconItem { 
+  margin-top: 16px;
+}
+
+.headerIconLink {
+  font-size: 24px;
+  color: white;
+  display: block;
+}
+
+/********* News Section Styles *************/
+
+.news{
+  padding: 98px 0 111px 0;
+}
+
+.newsHeading {
+  font-size: 49px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 95px;
+}
+
+/**** GALLERY STYLES ****/
+.newsPhotos {
+  margin-bottom: 100px;
+}
+
+.newsPhotosItem {
+  width: calc(33.33333% - 26.666px);
+  float: left;
+}
+
+.newsPhotosItem:not(:last-child) {
+  margin-right: 40px;
+}
+
+/**** HIGHLIGHT STYLES **************/
+
+.highlightImgContainer {
+  width: 24.6%;
+  float: left;
+}
+
+.highlightContent {
+  width: calc(75.4% - 42px);
+  margin-left: 42px;
+  float: left;
+}
+
+.highlightContent p {
+  margin-bottom: 0;
+}
+
+.highlightHeading {
+  font-size: 42px;
+  line-height: .6;
+  margin: 0; 
+}
+
+.highlightBtn {
+  margin-top: 45px;
+}
+
+/*** TRENDS STYLES ************/
+.trends{
+  height: 37.5vw; 
+  /* 600 is the height of the image on the sketch. We divide it by 1600 which is the sketch width to get 37.5vw!
+  I set the height on the trends section to avoid any weird white space I was getting before
+  when I tried setting it on the left side alone. This preserves our size ratio. If you resize
+  the browser to 1600px. The image still has a height of 600px*/
+}
+.trendsLeft, 
+.trendsRight {
+  width: 50%;
+  float: left;
+}
+
+.trendsLeft {
+  display: table; /*Sets parent to Table  so we can set the child (trendsContent) to display:table-cell*/
+  height: 100%; /*Sets the left side text height flush with the overall section at 37.5vw*/
+  padding-left: 16.4%;
+  padding-right: 95px;
+}
+
+/* using table centering referenced from: https://css-tricks.com/centering-in-the-unknown/ */
+.trendsContent {
+  width: 100%; 
+  display: table-cell; /* Sets out child content div to a table-cell*/
+  vertical-align: middle; /* Gives us access to vertical align which inside the table-cell display lets us center*/
+}
+
+.trendsRight{
+  height:100%;/*Sets our img to be its size ratio as on the sketch 600/1600 = 37.5vw*/
+}
+
+.articlesHeadingStyle {
+  font-size: 35px;
+  color: #010101;
+  line-height: 1.2;
+}
+ 
+.trendsHeading {
+  width: 68%;
+  margin: 0;
+  margin-bottom: 18px; 
+}
+
+/* FASHION STYLES */
+.fashionWeek{
+  height: 37.50vw;
+}
+.fashionWeekLeft, .fashionWeekRight {
+  width: 50%;
+  float: left;
+}
+
+.fashionWeekLeft{
+  height: 100%;
+}
+
+.fashionWeekRight{
+  height: 100%;
+  padding-right: 16.4%;
+  padding-left: 95px;
+  display: table;  
+}
+
+.fashionContent {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.fashionWeekHeading {
+  width: 100%;
+}
+
+.fashionWeekText {
+  margin-bottom: 40px;
+}
+
+/********** LINKS STYES ********************/
+
+.links {
+  background-image: url(images/links3200.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding:106px 0 96px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.linksBrands,
+.linksCommunity,
+.linksEvents {
+  float: left;
+}
+
+.linksBrands {
+  width: 22.3%;
+  margin-right: 17.2%;
+}
+
+.linksCommunity {
+  width: 20.8%;
+  margin-right: 23.2%;
+}
+
+.linksEvents {
+  width: 12.8%;
+}
+
+.linksLink {
+  font-size: 31.2px;
+  color: #fff;
+}
+
+.linksIcon {
+  font-size: 56px;
+}
+
+/**** FOOTER STYLES ****/
+.footer {
+  background: #e3e3e3;
+}
+
+.footerHeading {
+  font-size: 25px;
+  line-height: .8;
+  margin: 0;
+  margin-bottom: 13px; 
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footerTop {
+  padding-top: 94px;
+  padding-bottom: 110px;
+}
+
+.footerContactForm {
+  width: 50%;
+  margin-right: 8.59%;
+  float: left;
+}
+
+.footerContactForm p {
+  margin-bottom: 10px;
+}
+
+.footerForm {
+  width: 100%;
+}
+
+.footerEmail {
+  width: 75%;
+  height: 51px;
+  padding: 13px 15px;
+  border: none; 
+}
+
+.footerBtn {
+  width: 25%;
+  height: 51px;
+  padding: 14px 0;
+  border: none;
+  float:right;
+}
+
+.footerContactInfo {
+  width: 23.4575%;
+  float: left;
+}
+
+.footerContactInfo p:first-of-type {
+  margin-top: 20px;
+}
+
+.footerNavigation {
+  width: 17.95%;
+  text-align: right;
+  float: left;
+}
+
+.footerNavList {
+  transform: translateY(-5px);
+}
+
+.footerNavLink {
+  font-family: "Catamaran";
+  text-transform: uppercase;
+  color: #040404;
+}
+
+.footerBottom {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  padding: 9.5px 0;
+  color: #050505;
+  background: #acacac;
+}
+
+@media(max-width:1510px) {
+  .trendsLeft{
+    padding-left: 10%;
+    padding-right: 60px;
+  }
+
+  .fashionWeekRight {
+    padding-right: 10%;
+    padding-left: 60px;
+  }
+
+  .articlesHeadingStyle {
+    font-size: 30px;
+  }
+}
+
+@media(max-width:1350px) {
+  .wrapper{
+    margin:0;
+    max-width:none;
+  }
+
+  .headerLogo {
+    margin-left: 20px;
+  }
+
+  .headerNav {
+    margin-right: 20px;
+  }
+
+  .headerHeading {
+    font-size: 140px;
+  }
+
+  .headerHeadingLarge {
+    font-size: 220px;
+  }
+
+  .news{
+    padding-top: 70px;
+    padding-bottom: 0;
+  }
+  
+  .newsHeading {
+    font-size: 44px;
+    margin-bottom: 70px;
+  }
+
+  .highlightHeading {
+    font-size: 37px;
+  }
+
+  .highlightImgContainer {
+    width: 50%;
+  }
+
+  .highlightContent {
+    width: calc(50% - 60px);
+    height: 49.3vw;
+    margin-left: 60px;
+    padding-right: 5%;
+    display: table;
+  }
+
+  .highlightContentBox {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .trendsLeft {
+    padding-left:5%;
+  }
+
+  .fashionWeekRight {
+    padding-right:5%;
+  }
+
+  .links{
+    padding: 60px 0;
+  }
+  
+  .footerTop {
+    padding: 60px;
+  }
+  .footerContactInfo {
+    width: 31%;
+  }
+  .footerNavigation {
+    width: 10%;
+  }
+}
+
+@media(max-width:1200px) {
+  .highlightImgContainer {
+    margin: 0 auto;
+    float: none;
+  }
+
+  .highlightContent {
+    width:100%;
+    height:auto;
+    margin:40px auto;
+    padding: 0 4%;
+    text-align: center;
+    display:block; 
+  }
+
+  .highlightBtn {
+    padding: 22px 41px;
+  }
+
+  .trendsLeft, .trendsRight {
+    width: 100%;
+    display: block;
+    float: left;
+  }
+
+  .trends{
+    height:auto;
+  }
+
+  /* Moving lower HTML div ON TOP reference https://stackoverflow.com/questions/25710215/change-order-of-floated-divs-with-css */
+  .trendsLeft {
+    margin-top: 50.5vw; /* Let's the top div *duck* down under the bottom one */
+    padding: 50px 5% 51px 5%; /*20px divided by 400px mobile version = 5%*/ 
+    text-align: center;
+    /* height: auto; */
+  }
+
+  .trendsRight {
+    width: 100%;
+    height: 50.5vw; /* Mobile version is 202px height divided 400px width for 50.5vw */
+    margin-left: -100%; /* Moves the bottom div ON TOP of the top one */
+  }
+  
+  .trendsHeading {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 1;
+  }
+
+  .trendsText{
+    margin-bottom:25px;
+  }
+
+  .trendsRight img {
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .fashionWeek{
+    height:auto;
+  }
+
+  .fashionWeekLeft, .fashionWeekRight {
+    width: 100%;    
+  }
+
+  .fashionWeekLeft {
+    height: 56vw; /* Mobile version 224px divided 400px for 56vw */
+  }
+
+  .fashionWeekLeft img {
+    object-fit: cover;
+    object-position: 50% 30%;
+  }
+
+  .fashionWeekRight {
+    padding:50px 5%;
+    text-align: center; 
+    /* height: auto; */
+  }
+
+  .fashionWeekHeading {
+    margin-top: 0;
+  }
+
+  .fashionWeekText{
+    margin-bottom:25px;
+  }
+
+  .footerTop {
+    padding: 50px 5%;
+  }
+
+  .footerContactForm {
+    width: 100%;
+    margin:0 auto;
+    text-align: center;
+  }
+
+  .footerEmail {
+    width: 100%;
+    margin-bottom: 12px;
+    margin-top: 11px;
+  }
+
+  .footerForm {
+    width:100%;
+    margin-bottom:43px;
+    display:block;
+  }
+
+  .footerBtn {
+    width: 100%;
+    clear: left;
+  }
+
+  .footerContactInfo {
+    width: 50%;
+    clear: left;
+  }
+
+  .footerNavigation {
+    width: 50%;
+  }
+ 
+  .footerNavItem {
+    display: inline-block;
+  }
+
+  .footerNavItem:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media(max-width:1050px) {
+  .hamburgerMenu {
+    display: block;
+  }
+
+  .headerNavigation {
+    display: none;
+  }
+
+  .headerIconList {
+    display: none;
+  }
+
+  .newsPhotos {
+    margin-bottom:50px;
+    padding:0 4%;
+  }
+
+  .newsPhotosItem:last-child {
+    display: none;
+  }
+
+  .newsPhotosItem:nth-of-type(2) {
+    margin-right: 0;
+  }
+
+  .newsPhotosItem {
+    width: calc(50% - 20px);
+  }
+
+  .links {
+    padding: 60px; 
+  }
+
+  .linksBrands, .linksCommunity, .linksEvents {
+    width: 33.3333%;
+    margin: 0;
+  }
+}
+
+@media(max-width:900px) {
+  .links {  
+    background-image: url(images/linksMobile800.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+  }
+
+  .linksBrands, .linksCommunity, .linksEvents {
+    width: 100%;
+    float: right;
+  }
+
+  .linksCommunity, .linksEvents {
+    margin-top: 40px;
+  }
+}
+
+@media(max-width:800px) {
+  .header{
+    background: url(images/hero800.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .headerHeading {
+    font-size: 90px;
+  }
+
+  .headerHeadingLarge {
+    font-size: 150px;
+  }
+
+  .footerContactInfo {
+    width: 75%;
+  }
+
+  .footerNavigation {
+    width: 25%;
+  }
+
+  .footerNavItem {
+    display: block;   
+  }
+
+  .footerNavItem:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
+@media(max-width:550px) {
+  body {
+    font-size: 18px;
+  }
+
+  .headerHeading {
+    font-size: 67.5px;
+    margin: 0;
+  }
+
+  .headerHeadingLarge {
+    font-size: 102.2px;
+  }
+
+  .news {
+    padding-top: 41px;
+  }
+
+  .newsHeading {
+    font-size: 35px;
+    margin-bottom: 41px;
+  }
+  
+  .newsPhotosItem:first-child {
+    margin-right: 18px;
+  }
+
+  .newsPhotosItem {
+    width: calc(50% - 9px);
+  }
+
+  .highlightHeading {
+    font-size: 33px;
+    line-height: 1.1;
+  }
+
+  .highlightContentBox p{
+    text-align:left;
+  }
+
+  .highlightImgContainer{
+    width:78.75%;
+  }
+
+  .fashionWeekLeft img {
+    object-position: top;
+  }
+
+  .articlesHeadingStyle {
+    font-size: 22px;
+  }
+
+  .linksLink {
+    font-size: 27.3px;
+  }
+
+  .footer p {
+    font-weight: 400;
+  }
+
+  .footerContactForm p {
+    font-size: 16px;
+  }
+
+  .footerContactInfo p {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .footerNavLink {
+    font-size: 20px;
+  }
+
+  .footerBottom p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:400px) {
+  .header {
+    background: url(images/hero400.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .links {
+    background-image: url(images/linksMobile400.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (min-resolution: 192dpi) and (min-width: 500px),
+       (-webkit-min-device-pixel-ratio: 2) and (min-width: 500px) {
+      .header {
+        background-image: url(images/hero1600.jpg);
+      }
+
+      .links {
+        background-image: url(images/linksMobile1200.jpg);
+      }
+    }
+
+@media (min-resolution: 192dpi) and (min-width: 900px),
+       (-webkit-min-device-pixel-ratio: 2) and (min-width: 900px) {
+
+      .links {
+        background-image: url(images/links3200.jpg);
+      }
+ }
+
+@media (min-resolution: 192dpi) and (min-width: 1300px),
+       (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px),
+       (min-width: 2000px) {     
+       
+      .header {
+        background-image: url(images/hero3200.jpg);
+      }
+  }
+
+@media (min-resolution:192dpi) and (max-width:500px),
+       (-webkit-min-device-pixel-ratio: 2) and (max-width: 500px){
+      .header {
+        background-image:url(images/hero800.jpg);
+      }
+
+      .links {
+        background-image: url(images/linksMobile800.jpg);
+      }
+  } 
+
+  
+
+
+
+
