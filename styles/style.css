@@ -1,3 +1,4 @@
+/**** BASE ****/
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
 
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
@@ -67,7 +68,6 @@ img {
 }
 
 /* RE-USABLE STYLES */
-
 .cormorantStyleSemibold {
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
@@ -94,7 +94,6 @@ img {
 }
 
 /********* HEADER STYLES *************/
-
 .hamburgerMenu {
   width: 40px;
   height: 23px;
@@ -190,7 +189,6 @@ img {
 }
 
 /********* News Section Styles *************/
-
 .news{
   padding: 98px 0 111px 0;
 }
@@ -218,7 +216,6 @@ img {
 }
 
 /**** HIGHLIGHT STYLES **************/
-
 .highlightImgContainer {
   width: 24.6%;
   float: left;
@@ -309,7 +306,6 @@ img {
   vertical-align: middle;
 }
 
-
 .fashionWeekText {
   margin-bottom: 40px;
 }
@@ -318,7 +314,6 @@ img {
 
 .links {
   background-image: url(../images/links1600.jpg);
- 
   background-size: cover;
   padding:106px 0 96px 0;
   text-align: center;
@@ -398,15 +393,13 @@ img {
 
 .footerEmail {
   width: 75%;
-  height: 51px;
   padding: 13px 15px;
   border: none; 
 }
 
 .footerBtn {
   width: 25%;
-  height: 51px;
-  padding: 14px 0;
+  padding: 14.25px 0;
   border: none;
   float:right;
 }
@@ -445,6 +438,7 @@ img {
   background: #acacac;
 }
 
+/*** BREAKPOINT: 1510px ***/
 @media(max-width:1510px) {
   .trendsLeft{
     padding-left: 10%;
@@ -461,6 +455,7 @@ img {
   }
 }
 
+/*** BREAKPOINT: 1350px ***/
 @media(max-width:1350px) {
   .wrapper{
     margin:0;
@@ -539,6 +534,7 @@ img {
   }
 }
 
+/*** BREAKPOINT: 1200px ***/
 @media(max-width:1200px) {
   .highlightImgContainer {
     margin: 0 auto;
@@ -663,6 +659,7 @@ img {
   }
 }
 
+/*** BREAKPOINT: 1050px ***/
 @media(max-width:1050px) {
   .hamburgerMenu {
     display: block;
@@ -703,11 +700,10 @@ img {
   }
 }
 
+/*** BREAKPOINT: 900px ***/
 @media(max-width:900px) {
   .links {  
     background-image: url(../images/linksMobile800.jpg);
-    background-size: cover;
-    background-position: center;
     padding: 50px 0;
   }
 
@@ -720,6 +716,7 @@ img {
   }
 }
 
+/*** BREAKPOINT: 800px ***/
 @media(max-width:800px) {
   .header{
     background-image: url(../images/heroMobile800.jpg);
@@ -750,6 +747,7 @@ img {
   }
 }
 
+/*** BREAKPOINT:550px ***/
 @media(max-width:550px) {
   body {
     font-size: .9rem;
@@ -824,6 +822,7 @@ img {
   }
 }
 
+/*** BREAKPOINT: 400px ***/
 @media (max-width:400px) {
   .header {
     background-image: url(../images/heroMobile400.jpg);
@@ -834,6 +833,7 @@ img {
   }
 }
 
+/*** BREAKPOINT: 390px ***/
 @media (max-width:390px){
   .headerHeading{
     font-size:2.8rem;
@@ -852,8 +852,9 @@ img {
   }
 }
 
-@media (min-resolution: 192dpi) and (min-width: 500px),
-       (-webkit-min-device-pixel-ratio: 2) and (min-width: 500px) {
+/*** FOR HIGH-RES ABOVE 501px ***/
+@media (min-resolution: 192dpi) and (min-width: 501px),
+       (-webkit-min-device-pixel-ratio: 2) and (min-width: 501px) {
   .header {
     background-image: url(../images/hero1600.jpg);
   }
@@ -863,6 +864,7 @@ img {
   }
 }
 
+/*** FOR HIGH-RES ABOVE 900px ***/
 @media (min-resolution: 192dpi) and (min-width: 900px),
        (-webkit-min-device-pixel-ratio: 2) and (min-width: 900px) {
 
@@ -871,6 +873,7 @@ img {
   }
 }
 
+/*** FOR HIGH-RES ABOVE 1300px OR SCREENS LARGER THAN 2000px***/
 @media (min-resolution: 192dpi) and (min-width: 1300px),
        (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px),
        (min-width: 2000px) {     
@@ -880,6 +883,7 @@ img {
   }
 }
 
+/*** FOR HIGH-RES BELOW 500px ***/
 @media (min-resolution:192dpi) and (max-width:500px),
        (-webkit-min-device-pixel-ratio: 2) and (max-width: 500px){
   .header {
