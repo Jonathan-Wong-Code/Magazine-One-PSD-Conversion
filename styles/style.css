@@ -130,11 +130,11 @@ img {
 
 .headerNav {
   margin-top: 20px;
-  float:right;
+  float: right;
 }
 
 .headerNavItem {
-  float:left;
+  float: left;
 }
 
 .headerNavItem:not(:last-child) {
@@ -146,7 +146,7 @@ img {
   font-family: "Catamaran", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
-  display:block;
+  display: block;
   padding: 11px 2px;
   color: #fcfcfc;
 }
@@ -242,7 +242,7 @@ img {
 }
 
 /*** TRENDS STYLES ************/
-.trends{
+.trends {
   height: 37.5vw; 
   /* 600 is the height of the image on the sketch. We divide it by 1600 which is the sketch width to get 37.5vw!
   I set the height on the trends section to avoid any weird white space I was getting before
@@ -285,7 +285,7 @@ img {
 }
 
 /* FASHION STYLES */
-.fashionWeek{
+.fashionWeek {
   height: 37.50vw; /* SAME LOGIC AS TRENDS SECTION APPLIES*/
 }
 
@@ -295,7 +295,7 @@ img {
   float: left;
 }
 
-.fashionWeekRight{
+.fashionWeekRight {
   padding-right: 16.4%;
   padding-left: 95px;
   display: table;  
@@ -315,7 +315,7 @@ img {
 .links {
   background-image: url(../images/links1600.jpg);
   background-size: cover;
-  padding:106px 0 96px 0;
+  padding: 106px 0 96px 0;
   text-align: center;
   color: #fff;
 }
@@ -343,17 +343,17 @@ img {
 .linksLink {
   font-size: 1.56rem;
   color: #fff;
-  display:inline-block;
+  display: inline-block;
 }
 
 .linksIcon {
   font-size: 2.8rem;
-  display:block;
+  display: block;
 }
 
-.linksLink p{
-  margin:0;
-  display:block;
+.linksLink p {
+  margin: 0;
+  display: block;
 }
 
 /**** FOOTER STYLES ****/
@@ -401,7 +401,7 @@ img {
   width: 25%;
   padding: 14.25px 0;
   border: none;
-  float:right;
+  float: right;
 }
 
 .footerContactInfo {
@@ -424,7 +424,7 @@ img {
 }
 
 .footerNavLink {
-  font-family: "Catamaran";
+  font-family: "Catamaran", sans-serif;
   text-transform: uppercase;
   color: #040404;
 }
@@ -440,7 +440,7 @@ img {
 
 /*** BREAKPOINT: 1510px ***/
 @media(max-width:1510px) {
-  .trendsLeft{
+  .trendsLeft {
     padding-left: 10%;
     padding-right: 60px;
   }
@@ -458,8 +458,8 @@ img {
 /*** BREAKPOINT: 1350px ***/
 @media(max-width:1350px) {
   .wrapper{
-    margin:0;
-    max-width:none;
+    margin: 0;
+    max-width: none;
   }
 
   .headerLogo {
@@ -510,11 +510,11 @@ img {
   }
 
   .trendsLeft {
-    padding-left:5%;
+    padding-left: 5%;
   }
 
   .fashionWeekRight {
-    padding-right:5%;
+    padding-right: 5%;
   }
 
   .links{
@@ -542,12 +542,12 @@ img {
   }
 
   .highlightContent {
-    width:100%;
-    height:auto;
-    margin:40px auto;
+    width: 100%;
+    height: auto;
+    margin: 40px auto;
     padding: 0 4%;
     text-align: center;
-    display:block; 
+    display: block; 
   }
 
   .highlightBtn {
@@ -561,7 +561,7 @@ img {
   }
 
   .trends{
-    height:auto;
+    height: auto;
   }
 
   /* Moving lower HTML div ON TOP reference https://stackoverflow.com/questions/25710215/change-order-of-floated-divs-with-css */
@@ -584,7 +584,7 @@ img {
   }
 
   .trendsText{
-    margin-bottom:25px;
+    margin-bottom: 25px;
   }
 
   .trendsRight img {
@@ -593,7 +593,7 @@ img {
   }
 
   .fashionWeek{
-    height:auto;
+    height: auto;
   }
 
   .fashionWeekLeft, .fashionWeekRight {
@@ -610,7 +610,7 @@ img {
   }
 
   .fashionWeekRight {
-    padding:50px 5%;
+    padding: 50px 5%;
     text-align: center; 
   }
 
@@ -618,8 +618,8 @@ img {
     margin-top: 0;
   }
 
-  .fashionWeekText{
-    margin-bottom:25px;
+  .fashionWeekText {
+    margin-bottom: 25px;
   }
 
   .footerTop {
@@ -628,7 +628,7 @@ img {
 
   .footerContactForm {
     width: 100%;
-    margin:0 auto;
+    margin: 0 auto;
     text-align: center;
   }
 
@@ -639,9 +639,9 @@ img {
   }
 
   .footerForm {
-    width:100%;
-    margin-bottom:43px;
-    display:block;
+    width: 100%;
+    margin-bottom: 43px;
+    display: block;
   }
 
   .footerBtn {
@@ -674,8 +674,8 @@ img {
   }
 
   .newsPhotos {
-    margin-bottom:50px;
-    padding:0 4%;
+    margin-bottom: 50px;
+    padding: 0 4%;
   }
 
   .newsPhotosItem:last-child {
@@ -780,16 +780,16 @@ img {
   }
 
   .highlightHeading {
-    font-size:1.65rem;
+    font-size: 1.65rem;
     line-height: 1.1;
   }
 
   .highlightContentBox p{
-    text-align:left;
+    text-align: left;
   }
 
   .highlightImgContainer{
-    width:78.75%;
+    width: 78.75%;
   }
 
   .articlesHeadingStyle {
@@ -834,21 +834,21 @@ img {
 }
 
 /*** BREAKPOINT: 390px ***/
-@media (max-width:390px){
-  .headerHeading{
-    font-size:2.8rem;
+@media (max-width:390px) {
+  .headerHeading {
+    font-size: 2.8rem;
   }
 
-  .headerHeadingLarge{
-    font-size:4.25rem;
+  .headerHeadingLarge {
+    font-size: 4.25rem;
   }
 
-  .footerTop{
+  .footerTop {
     padding: 30px 2%;
   }
 
-  .footerNavLink{
-    font-size:.9rem;
+  .footerNavLink {
+    font-size: .9rem;
   }
 }
 
@@ -887,7 +887,7 @@ img {
 @media (min-resolution:192dpi) and (max-width:500px),
        (-webkit-min-device-pixel-ratio: 2) and (max-width: 500px){
   .header {
-    background-image:url(../images/heroMobile800.jpg);
+    background-image: url(../images/heroMobile800.jpg);
   }
 
   .links {
