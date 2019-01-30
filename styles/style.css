@@ -39,8 +39,8 @@ body{
 
 /* RESETS AND PRECONFIGS */
 ul, li {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -58,7 +58,7 @@ a {
 
 .wrapperSmall {
   max-width: 1000px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 img {
@@ -260,7 +260,6 @@ img {
 
 .trendsLeft {
   display: table; /*Sets parent to Table  so we can set the child (trendsContent) to display:table-cell*/
-  
   padding-left: 16.4%;
   padding-right: 95px;
 }
@@ -311,7 +310,6 @@ img {
 }
 
 /********** LINKS STYES ********************/
-
 .links {
   background-image: url(../images/links1600.jpg);
   background-size: cover;
