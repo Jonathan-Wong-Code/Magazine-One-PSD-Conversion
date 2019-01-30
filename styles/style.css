@@ -105,7 +105,7 @@ img {
 }
 
 .header {
-  background: url(images/hero1600.jpg);
+  background-image: url(../images/hero1600.jpg);
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -317,8 +317,8 @@ img {
 /********** LINKS STYES ********************/
 
 .links {
-  background-image: url(images/links3200.jpg);
-  background-repeat: no-repeat;
+  background-image: url(../images/links1600.jpg);
+ 
   background-size: cover;
   padding:106px 0 96px 0;
   text-align: center;
@@ -573,7 +573,6 @@ img {
     margin-top: 50.5vw; /* Let's the top div *duck* down under the bottom one */
     padding: 50px 5% 51px 5%; /*20px divided by 400px mobile version = 5%*/ 
     text-align: center;
-    /* height: auto; */
   }
 
   .trendsRight {
@@ -706,7 +705,7 @@ img {
 
 @media(max-width:900px) {
   .links {  
-    background-image: url(images/linksMobile800.jpg);
+    background-image: url(../images/linksMobile800.jpg);
     background-size: cover;
     background-position: center;
     padding: 50px 0;
@@ -723,9 +722,7 @@ img {
 
 @media(max-width:800px) {
   .header{
-    background: url(images/heroMobile800.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: url(../images/heroMobile800.jpg);
   }
 
   .headerHeading {
@@ -829,15 +826,11 @@ img {
 
 @media (max-width:400px) {
   .header {
-    background: url(images/heroMobile400.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: url(../images/heroMobile400.jpg);
   }
 
   .links {
-    background-image: url(images/linksMobile400.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: url(../images/linksMobile400.jpg);
   }
 }
 
@@ -862,11 +855,11 @@ img {
 @media (min-resolution: 192dpi) and (min-width: 500px),
        (-webkit-min-device-pixel-ratio: 2) and (min-width: 500px) {
   .header {
-    background-image: url(images/hero1600.jpg);
+    background-image: url(../images/hero1600.jpg);
   }
 
   .links {
-    background-image: url(images/linksMobile1200.jpg);
+    background-image: url(../images/linksMobile1200.jpg);
   }
 }
 
@@ -874,7 +867,7 @@ img {
        (-webkit-min-device-pixel-ratio: 2) and (min-width: 900px) {
 
   .links {
-    background-image: url(images/links3200.jpg);
+    background-image: url(../images/links3200.jpg);
   }
 }
 
@@ -883,18 +876,18 @@ img {
        (min-width: 2000px) {     
        
   .header {
-    background-image: url(images/hero3200.jpg);
+    background-image: url(../images/hero3200.jpg);
   }
 }
 
 @media (min-resolution:192dpi) and (max-width:500px),
        (-webkit-min-device-pixel-ratio: 2) and (max-width: 500px){
   .header {
-    background-image:url(images/heroMobile800.jpg);
+    background-image:url(../images/heroMobile800.jpg);
   }
 
   .links {
-    background-image: url(images/linksMobile800.jpg);
+    background-image: url(../images/linksMobile800.jpg);
   }
 } 
 
