@@ -35,11 +35,13 @@ body{
   line-height: 1.45;
   color: #1f2022;
 }
+
 /* RESETS AND PRECONFIGS */
 ul, li {
   margin:0;
   padding:0;
 }
+
 ul {
   list-style-type: none;
 }
@@ -102,13 +104,6 @@ img {
   display: none;
 }
 
-.headerHamburgerMenu::before {
-  bottom: 15px;
-}
-
-.headerHamburgerMenu::after {
-  top: 15px;
-}
 .header {
   background: url(images/hero1600.jpg);
   background-size: cover;
@@ -180,8 +175,8 @@ img {
 .headerIconList {
   text-align: center;
   position: absolute;
-  right: 6.125%;
-  bottom: 3%;
+  right: 3%;
+  bottom: 6.0375%;
 }
 
 .headerIconItem { 
@@ -257,15 +252,18 @@ img {
   when I tried setting it on the left side alone. This preserves our size ratio. If you resize
   the browser to 1600px. The image still has a height of 600px*/
 }
+
 .trendsLeft, 
 .trendsRight {
   width: 50%;
+  height: 100%; /*Sets the height to 100% to keep both sections of consistent height. Also
+  100% height on the left side let's us use display:table*/
   float: left;
 }
 
 .trendsLeft {
   display: table; /*Sets parent to Table  so we can set the child (trendsContent) to display:table-cell*/
-  height: 100%; /*Sets the left side text height flush with the overall section at 37.5vw*/
+  
   padding-left: 16.4%;
   padding-right: 95px;
 }
@@ -275,10 +273,6 @@ img {
   width: 100%; 
   display: table-cell; /* Sets out child content div to a table-cell*/
   vertical-align: middle; /* Gives us access to vertical align which inside the table-cell display lets us center*/
-}
-
-.trendsRight{
-  height:100%;/*Sets our img to be its size ratio as on the sketch 600/1600 = 37.5vw*/
 }
 
 .articlesHeadingStyle {
@@ -295,19 +289,16 @@ img {
 
 /* FASHION STYLES */
 .fashionWeek{
-  height: 37.50vw;
+  height: 37.50vw; /* SAME LOGIC AS TRENDS SECTION APPLIES*/
 }
+
 .fashionWeekLeft, .fashionWeekRight {
   width: 50%;
+  height: 100%;
   float: left;
 }
 
-.fashionWeekLeft{
-  height: 100%;
-}
-
 .fashionWeekRight{
-  height: 100%;
   padding-right: 16.4%;
   padding-left: 95px;
   display: table;  
@@ -318,9 +309,6 @@ img {
   vertical-align: middle;
 }
 
-.fashionWeekHeading {
-  width: 100%;
-}
 
 .fashionWeekText {
   margin-bottom: 40px;
@@ -378,13 +366,13 @@ img {
   margin-bottom: 13px; 
 }
 
-.footer p {
-  margin: 0;
-}
-
 .footerTop {
   padding-top: 94px;
   padding-bottom: 110px;
+}
+
+.footer p {
+  margin: 0;
 }
 
 .footerContactForm {
@@ -432,8 +420,9 @@ img {
 }
 
 .footerNavList {
-  transform: translateY(-5px);
+  transform: translateY(-5px)
 }
+
 
 .footerNavLink {
   font-family: "Catamaran";
@@ -666,14 +655,6 @@ img {
   .footerNavigation {
     width: 50%;
   }
- 
-  .footerNavItem {
-    display: inline-block;
-  }
-
-  .footerNavItem:not(:last-child) {
-    margin-right: 20px;
-  }
 }
 
 @media(max-width:1050px) {
@@ -736,7 +717,7 @@ img {
 
 @media(max-width:800px) {
   .header{
-    background: url(images/hero800.jpg);
+    background: url(images/heroMobile800.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -846,7 +827,7 @@ img {
 
 @media (max-width:400px) {
   .header {
-    background: url(images/hero400.jpg);
+    background: url(images/heroMobile400.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -855,6 +836,32 @@ img {
     background-image: url(images/linksMobile400.jpg);
     background-size: cover;
     background-position: center;
+  }
+}
+
+@media (max-width:390px){
+  .headerHeading{
+    font-size:56px;
+  }
+
+  .headerHeadingLarge{
+    font-size:85px;
+  }
+
+  .footerTop{
+    padding: 30px 4%;
+  }
+
+  .footerContactInfo{
+    width:100%;
+    text-align: center;
+  }
+
+  .footerNavigation{ 
+    text-align: center;
+    width:100%; 
+    margin-top:30px;
+    clear:left; 
   }
 }
 
@@ -889,7 +896,7 @@ img {
 @media (min-resolution:192dpi) and (max-width:500px),
        (-webkit-min-device-pixel-ratio: 2) and (max-width: 500px){
       .header {
-        background-image:url(images/hero800.jpg);
+        background-image:url(images/heroMobile800.jpg);
       }
 
       .links {
