@@ -348,10 +348,17 @@ img {
 .linksLink {
   font-size: 31.2px;
   color: #fff;
+  display:inline-block;
 }
 
 .linksIcon {
   font-size: 56px;
+  display:block;
+}
+
+.linksLink p{
+  margin:0;
+  display:block;
 }
 
 /**** FOOTER STYLES ****/
@@ -849,19 +856,11 @@ img {
   }
 
   .footerTop{
-    padding: 30px 4%;
+    padding: 30px 2%;
   }
 
-  .footerContactInfo{
-    width:100%;
-    text-align: center;
-  }
-
-  .footerNavigation{ 
-    text-align: center;
-    width:100%; 
-    margin-top:30px;
-    clear:left; 
+  .footerNavLink{
+    font-size:18px;
   }
 }
 
